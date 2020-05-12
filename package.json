@@ -1,0 +1,42 @@
+{
+  "name": "lemi-kids-mailing",
+  "version": "17.0.0",
+  "private": true,
+  "description": "Рассылка писем от LEMI KIDS",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "browser-sync": "2.26.x",
+    "gulp": "^4.0.2",
+    "gulp-plumber": "1.2.x",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "4.0.x",
+    "stylelint": "10.1.x",
+    "stylelint-config-htmlacademy": "0.1.x"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp build",
+    "start": "gulp start",
+    "send": "gulp send"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "editorconfig-cli": [
+    "source/*.html",
+    "source/sass/**/*.{sass,scss}"
+  ],
+  "engines": {
+    "node": "8.16"
+  },
+  "dependencies": {
+    "del": "^5.1.0",
+    "gulp-email-builder": "^3.0.0",
+    "gulp-replace": "^1.0.0",
+    "nodemailer": "^6.4.6"
+  }
+}
