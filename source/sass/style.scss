@@ -118,6 +118,23 @@ table {
   }
 }
 
+.user {
+  width: 100%;
+}
+
+.user__cell {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+
+  &--key {
+    padding: 0 20px;
+
+    border-left: 1px solid #666666;
+  }
+}
+
 .order__cell {
   height: 36px;
 
@@ -317,6 +334,10 @@ table {
   &--feedback {
     padding: 20px;
   }
+
+  &--social {
+    padding-bottom: 20px;
+  }
 }
 
 .footer__feedback {
@@ -344,4 +365,8 @@ table {
   color: #ffffff;
 
   background-color: $red;
+}
+
+.social__item {
+  width: 45px;
 }
