@@ -53,6 +53,13 @@ table {
 
     background-color: #ffffff;
   }
+
+  &--pay {
+    padding: 20px;
+    padding-bottom: 55px;
+
+    background-color: #ffffff;
+  }
 }
 
 .main-table__heading {
@@ -260,4 +267,68 @@ table {
     font-weight: bold;
     color: #000000;
   }
+}
+
+.main-table__pay {
+  display: block;
+  width: 280px;
+  height: 50px;
+
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+
+  background-color: $green;
+}
+
+.footer {
+  width: 100%;
+  padding-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 56px;
+  color: #ffffff;
+
+  background-color: $bgBlack;
+}
+
+.footer__cell {
+  padding-right: 20px;
+  padding-left: 20px;
+
+  border-bottom: 1px solid #2f2f2f;
+
+  &--feedback {
+    padding: 20px;
+  }
+}
+
+.footer__feedback {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.footer__call {
+  margin-bottom: 20px;
+
+  line-height: 17px;
+}
+
+.footer__link {
+  display: block;
+  width: 280px;
+  height: 50px;
+
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+
+  background-color: $red;
 }
