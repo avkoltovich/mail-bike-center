@@ -12,7 +12,7 @@ const config = {
   },
   mail: {
     from: 'avkoltovich.test@gmail.com',
-    to: 'avkoltovich@mail.ru, avkoltovich@yandex.ru, avkoltovich@gmail.com,',
+    to: 'avkoltovich@mail.ru, avkoltovich@yandex.ru, avkoltovich@gmail.com',
     subject: 'Hello from NodeJS!',
     html: {path: './send/index.html'}
   }
