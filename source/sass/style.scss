@@ -11,6 +11,15 @@ body {
 
   font-family: "Arial", "Helvetica", sans-serif;
 
+}
+
+center {
+  width: 360px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+
   background-color: $bgGrey;
 }
 
@@ -72,6 +81,7 @@ table {
 }
 
 .main-table__heading {
+  margin-top: 0;
   margin-bottom: 8px;
 
   font-size: 24px;
@@ -102,6 +112,10 @@ table {
 }
 
 .header__cell {
+  &--phone {
+    display: none;
+  }
+
   &--align-right {
     text-align: right;
   }
@@ -112,10 +126,6 @@ table {
   font-weight: bold;
   text-decoration: none;
   color: #ffffff;
-
-  &--phone {
-    display: none;
-  }
 }
 
 .user {
@@ -128,8 +138,14 @@ table {
   text-decoration: none;
   color: #ffffff;
 
+  &--phone {
+    padding-right: 5px;
+    padding-left: 20px;
+  }
+
   &--key {
-    padding: 0 20px;
+    padding-right: 5px;
+    padding-left: 20px;
 
     border-left: 1px solid #666666;
   }
@@ -170,6 +186,23 @@ table {
   }
 }
 
+.order__pay-cell {
+  display: inline-block;
+
+  line-height: 36px;
+
+  &--right {
+    display: none;
+    height: 36px;
+    padding: 0 20px;
+    margin-right: 0;
+
+    color: #ffffff;
+
+    background-color: $green;
+  }
+}
+
 .order__link {
   display: block;
   width: 100%;
@@ -186,8 +219,6 @@ table {
 }
 
 .list__cell {
-  padding-bottom: 10px;
-
   border-bottom: 1px solid #e7e7e7;
 }
 
@@ -212,7 +243,11 @@ table {
 }
 
 .description__title {
+  display: inline-block;
   padding: 10px 0;
+
+  vertical-align: middle;
+
   border-bottom: 1px solid #e7e7e7;
 }
 
@@ -228,9 +263,11 @@ table {
 }
 
 .description__wrap {
-  padding: 10px 0;
+  display: inline-block;
+  padding: 20px 0;
   width: 168px;
 
+  vertical-align: middle;
   text-align: right;
 }
 
@@ -352,21 +389,34 @@ table {
   line-height: 17px;
 }
 
-.footer__link {
+.footer__button {
   display: block;
   width: 280px;
   height: 50px;
 
   font-size: 14px;
-  font-weight: bold;
   line-height: 50px;
-  text-align: center;
   text-decoration: none;
   color: #ffffff;
 
-  background-color: $red;
+  &--red {
+    font-weight: bold;
+    text-align: center;
+
+    background-color: $red;
+  }
+}
+
+.footer__social-wrap {
+  display: inline-block;
+
+  vertical-align: middle;
 }
 
 .social__item {
   width: 45px;
+}
+
+img {
+  display: block;
 }

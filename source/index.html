@@ -6,6 +6,12 @@
   <link rel="stylesheet" href="css/style.css">
   <style data-embed>
     @media (min-width: 600px) {
+      center {
+        width: 600px !important;
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+      }
+
       .main-table {
         width: 540px !important;
       }
@@ -15,13 +21,14 @@
       }
 
       .main-table__cell--title {
-        padding-top: 65px !important;
+        padding-top: 60px !important;
         padding-right: 30px !important;
         padding-left: 30px !important;
       }
 
       .main-table__cell--order {
-        padding: 30px !important;
+        padding: 0 30px !important;
+        padding-bottom: 20px !important;
       }
 
       .main-table__cell--item {
@@ -34,16 +41,88 @@
 
       .main-table__cell--pay {
         padding: 30px !important;
-        padding-bottom: 55px !important;
+        padding-bottom: 60px !important;
       }
 
-      .header__link--phone {
-        display: block !important;
+      .main-table__cell--footer {
+        padding-top: 30px !important;
+      }
+
+      .header__cell--phone {
+        display: table-cell !important;
+      }
+
+      .main-table__heading {
+        margin-bottom: 18px !important;
+      }
+
+      .order__cell--left {
+        width: 162px !important;
+
+        font-size: 16px !important;
+      }
+
+      .order__cell--right {
+        width: 318px !important;
+
+        font-size: 14px !important;
+      }
+
+      .order__pay-cell--right {
+        display: inline-block !important;
+        margin-left: 30px !important;
+      }
+
+      .order__cell--pay {
+        display: none !important;
+      }
+
+      .list__cell {
+        padding-top: 14px !important;
+        padding-bottom: 14px !important;
+      }
+
+      .item {
+        width: 480px !important;
+      }
+
+      .description {
+        width: 368px !important;
+      }
+
+      .description__title {
+        width: 222px !important;
+
+        border-bottom: none !important;
+      }
+
+      .description__wrap {
+        width: 138px !important;
+      }
+
+      .sale__wrap {
+        width: 46px !important;
+      }
+
+      .sale__title {
+        font-size: 8px !important;
+      }
+
+      .sale__count {
+        font-size: 12px !important;
       }
 
       .footer__cell {
         padding-right: 30px !important;
         padding-left: 30px !important;
+      }
+
+      .footer__cell--social {
+        padding-top: 26px !important;
+      }
+
+      .footer__social-wrap--right {
+        margin-left: 46px !important;
       }
     }
 
@@ -63,8 +142,19 @@
               <td class="header__cell">
                 <img src="https://bike-centre.ru/images/mail/logo.png" width="143" height="30" alt="BIKE CENTER">
               </td>
-              <td class="header__cell">
-                <a href="tel:+78005000320" class="header__link header__link--phone">8 (800) 500-03-20</a>
+              <td class="header__cell header__cell--phone">
+                <a href="tel:+78005000320" class="header__link header__link--phone">
+                  <table class="header__user user">
+                    <tr>
+                      <td class="user__cell user__cell--phone">
+                        <img src="https://bike-centre.ru/images/mail/phone.png" width="14" height="14" alt="" class="header__icon">
+                      </td>
+                      <td class="user__cell">
+                        8 (800) 500-03-20
+                      </td>
+                    </tr>
+                  </table>
+                </a>
               </td>
               <td class="header__cell header__cell--align-right">
                 <a href="https://bike-centre.ru/" class="header__link">
@@ -110,7 +200,7 @@
                 Дата доставки:
               </td>
               <td class="order__cell order__cell--right">
-                12.05.2020
+                Будет доступна после обработки заказа
               </td>
             </tr>
             <tr class="order__row">
@@ -142,15 +232,7 @@
                 Способ оплаты:
               </td>
               <td class="order__cell order__cell--right">
-                Online-оплата на сайте
-              </td>
-            </tr>
-            <tr class="order__row">
-              <td class="order__cell order__cell--left"></td>
-              <td class="order__cell order__cell--pay">
-                <a href="#" class="order__link">
-                  Оплатить
-                </a>
+                  Online-оплата на сайте
               </td>
             </tr>
           </table>
@@ -175,19 +257,22 @@
                         <div class="description__spec">
                           BLACK-WHITE-MAGENTA, 28-32
                         </div>
+                        <div class="description__spec">
+                          1 ШТ
+                        </div>
                       </div>
                       <div class="description__wrap">
                         <table class="description__sale sale">
                           <tr>
                             <td class="sale__cell sale__cell--sale">
-                              <div class="sale__wrap">
+                              <!-- <div class="sale__wrap">
                                 <p class="sale__title">Скидка</p>
                                 <p class="sale__count">-25%</p>
-                              </div>
+                              </div> -->
                             </td>
                             <td class="sale__cell sale__cell--price">
-                              <strike class="price__old">45 000 ₽</strike><br>
-                              <b class="price__new">35 000 ₽</br>
+                              <!-- <strike class="price__old">45 000 Р</strike><br> -->
+                              <b class="price__new">35 000 Р</br>
                             </td>
                           </tr>
                         </table>
@@ -212,6 +297,9 @@
                         <div class="description__spec">
                           BLUE-ORANGE, 17"
                         </div>
+                        <div class="description__spec">
+                          1 ШТ
+                        </div>
                       </div>
                       <div class="description__wrap">
                         <table class="description__sale sale">
@@ -223,8 +311,8 @@
                               </div>
                             </td>
                             <td class="sale__cell sale__cell--price">
-                              <strike class="price__old">45 000 ₽</strike><br>
-                              <b class="price__new">35 000 ₽</br>
+                              <strike class="price__old">45 000 Р</strike><br>
+                              <b class="price__new">35 000 Р</br>
                             </td>
                           </tr>
                         </table>
@@ -238,14 +326,14 @@
         </td>
       </tr>
       <tr>
-        <td class="main-table__cell main-table__cell--total">
+        <td class="main-table__cell main-table__cell--total" align="right">
           <table class="main-table__total total">
             <tr>
               <td class="total__cell">
                 Стоимость товаров:
               </td>
               <td class="total__cell total__cell--right">
-                60 990 ₽
+                60 990 Р
               </td>
             </tr>
             <tr>
@@ -261,7 +349,7 @@
                 Доставка:
               </td>
               <td class="total__cell total__cell--right">
-                811 ₽
+                811 Р
               </td>
             </tr>
             <tr>
@@ -269,14 +357,14 @@
                 Итого к оплате:
               </td>
               <td class="total__cell total__cell--right total__cell--total">
-                51 042 ₽
+                51 042 Р
               </td>
             </tr>
           </table>
         </td>
       </tr>
       <tr>
-        <td class="main-table__cell main-table__cell--pay">
+        <td class="main-table__cell main-table__cell--pay" align="right">
           <a href="#" class="main-table__pay">ОПЛАТИТЬ</a>
         </td>
       </tr>
@@ -285,53 +373,61 @@
           <table class="main-table__footer footer">
             <tr>
               <td class="footer__cell">
-                Как оплатить?
+                <a href="https://bike-centre.ru/pomoshch/kak-oplatit/" class="footer__button">
+                  Как оплатить?
+                </a>
               </td>
             </tr>
             <tr>
               <td class="footer__cell">
-                Помощь
+                <a href="https://bike-centre.ru/pomoshch/kak-poluchit/" class="footer__button">
+                  Доставка
+                </a>
               </td>
             </tr>
             <tr>
               <td class="footer__cell footer__cell--feedback">
                 <div class="footer__feedback">ОБРАТНАЯ СВЯЗЬ</div>
-                <div class="footer__call">Поможем подобрать товар!</div>
-                <a href="tel:+78005000320" class="footer__link">Позвонить +7 800 500 03 20</a>
+                <div class="footer__call">Остались вопросы? Поможем!</div>
+                <a href="tel:+78005000320" class="footer__button footer__button--red">Позвонить +7 800 500 03 20</a>
               </td>
             </tr>
             <tr>
               <td class="footer__cell footer__cell--social">
-                МЫ В СОЦИАЛЬНЫХ СЕТЯХ
-                <table class="footer__social social">
-                  <tr>
-                    <td class="social__item">
-                      <a href="">
-                        <img src="https://bike-centre.ru/images/mail/fb.png" width="40" height="40" alt="" class="social__img">
-                      </a>
-                    </td>
-                    <td class="social__item">
-                      <a href="">
-                        <img src="https://bike-centre.ru/images/mail/insta.png" width="40" height="40" alt="" class="social__img">
-                      </a>
-                    </td>
-                    <td class="social__item">
-                      <a href="">
-                        <img src="https://bike-centre.ru/images/mail/ok.png" width="40" height="40" alt="" class="social__img">
-                      </a>
-                    </td>
-                    <td class="social__item">
-                      <a href="">
-                        <img src="https://bike-centre.ru/images/mail/vk.png" width="40" height="40" alt="" class="social__img">
-                      </a>
-                    </td>
-                    <td class="social__item">
-                      <a href="">
-                        <img src="https://bike-centre.ru/images/mail/yt.png" width="40" height="40" alt="" class="social__img">
-                      </a>
-                    </td>
-                  </tr>
-                </table>
+                <div class="footer__social-wrap">
+                  МЫ В СОЦИАЛЬНЫХ СЕТЯХ
+                </div>
+                <div class="footer__social-wrap footer__social-wrap--right">
+                  <table class="footer__social social">
+                    <tr>
+                      <td class="social__item">
+                        <a href="https://www.facebook.com/BikeCentreKRR">
+                          <img src="https://bike-centre.ru/images/mail/fb.png" width="40" height="40" alt="" class="social__img">
+                        </a>
+                      </td>
+                      <td class="social__item">
+                        <a href="https://www.instagram.com/bike_center/">
+                          <img src="https://bike-centre.ru/images/mail/insta.png" width="40" height="40" alt="" class="social__img">
+                        </a>
+                      </td>
+                      <td class="social__item">
+                        <a href="https://ok.ru/group/55699209388128">
+                          <img src="https://bike-centre.ru/images/mail/ok.png" width="40" height="40" alt="" class="social__img">
+                        </a>
+                      </td>
+                      <td class="social__item">
+                        <a href="https://vk.com/bikecentre">
+                          <img src="https://bike-centre.ru/images/mail/vk.png" width="40" height="40" alt="" class="social__img">
+                        </a>
+                      </td>
+                      <td class="social__item">
+                        <a href="https://www.youtube.com/user/BikeCenterKRR/">
+                          <img src="https://bike-centre.ru/images/mail/yt.png" width="40" height="40" alt="" class="social__img">
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
               </td>
             </tr>
           </table>
